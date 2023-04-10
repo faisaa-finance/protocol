@@ -1,9 +1,9 @@
 pragma solidity >=0.5.0;
 
-import '@faisaa-finance/core/contracts/interfaces/IFaisaaPair.sol';
-import '@faisaa-finance/core/contracts/interfaces/IFaisaaFactory.sol';
-import '@uniswap/lib/contracts/libraries/Babylonian.sol';
-import '@uniswap/lib/contracts/libraries/FullMath.sol';
+import '../interface/IFaisaaPair.sol';
+import '../interface/IFaisaaFactory.sol';
+import './Babylonian.sol';
+import './FullMath.sol';
 
 import './SafeMath.sol';
 import './FaisaaLibrary.sol';

@@ -1,6 +1,6 @@
-pragma solidity >=0.5.0;
+pragma solidity >=0.5.16;
 
-import '@faisaa-finance/core/contracts/interfaces/IFaisaaPair.sol';
+import '../interface/IFaisaaPair.sol';
 
 import "./SafeMath.sol";
 
@@ -21,7 +21,7 @@ library FaisaaLibrary {
                 hex'ff',
                 factory,
                 keccak256(abi.encodePacked(token0, token1)),
-                hex'6b3610458cb6a86a7770510a78eecfe2f081b111a5d20a1301cacedc8c5522f9' // init code hash
+                hex'e749160b7215c73975a120b97653690e779a2e4276b6233e2d0554e4a9ab9223' // init code hash
             ))));
     }
 

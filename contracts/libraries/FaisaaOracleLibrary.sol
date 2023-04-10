@@ -1,7 +1,7 @@
 pragma solidity >=0.5.0;
 
-import '@faisaa-finance/core/contracts/interfaces/IFaisaaPair.sol';
-import '@uniswap/lib/contracts/libraries/FixedPoint.sol';
+import '../interface/IFaisaaPair.sol';
+import './FixedPoint.sol';
 
 // library with helper methods for oracles that are concerned with computing average prices
 library FaisaaOracleLibrary {

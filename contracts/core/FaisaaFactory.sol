@@ -1,6 +1,6 @@
 pragma solidity =0.5.16;
 
-import '../interface/IFaisaaFactory.sol';
+import '../Interface/IFaisaaFactory.sol';
 import './FaisaaPair.sol';
 
 contract FaisaaFactory is IFaisaaFactory {
@@ -11,6 +11,8 @@ contract FaisaaFactory is IFaisaaFactory {
     address[] public allPairs;
 
     event PairCreated(address indexed token0, address indexed token1, address pair, uint);
+
+    bytes32 public constant INIT_CODE_PAIR_HASH = keccak256(abi.encodePacked(type(FaisaaPair).creationCode));
 
     constructor(address _feeToSetter) public {
         feeToSetter = _feeToSetter;

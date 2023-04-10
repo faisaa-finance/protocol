@@ -1,10 +1,12 @@
 pragma solidity =0.5.16;
-import '../interface/IFaisaaPair.sol';
+import '../Interface/IFaisaaPair.sol';
+import '../libraries/SafeMath.sol';
 import '../libraries/Math.sol';
 import '../libraries/UQ112x112.sol';
-import '../interface/IERC20.sol';
-import '../interface/IFaisaaFactory.sol';
-import '../interface/IFaisaaCallee.sol';
+import '../Interface/IERC20.sol';
+import '../Interface/IFaisaaFactory.sol';
+import '../Interface/IFaisaaERC20.sol';
+import '../Interface/IFaisaaCallee.sol';
 
 contract FaisaaERC20 is IFaisaaERC20 {
     using SafeMath for uint;
@@ -98,7 +100,7 @@ contract FaisaaERC20 is IFaisaaERC20 {
 }
 
 contract FaisaaPair is IFaisaaPair, FaisaaERC20  {
-    using SafeMath  for uint;
+    using Math for uint;
     using UQ112x112 for uint224;
 
     uint public constant MINIMUM_LIQUIDITY = 10**3;
