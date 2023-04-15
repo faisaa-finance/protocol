@@ -1,7 +1,7 @@
-pragma solidity ^0.5.16;
-pragma experimental ABIEncoderV2;
+// SPDX-License-Identifier: MIT
+pragma solidity =0.5.16;
 
-import "../contracts/libraries/SafeMath.sol";
+import './libraries/SafeMath.sol';
 
 contract Faisaa {
     /// @notice EIP-20 token name for this token
@@ -14,7 +14,7 @@ contract Faisaa {
     uint8 public constant decimals = 18;
 
     /// @notice Total number of tokens in circulation
-    uint public totalSupply = 100000000 * 10 ** decimals(); // 100 million Faisaa
+    uint public totalSupply = 100_000_000e18; // 100 million Faisaa
 
     /// @notice Address which may mint new tokens
     address public minter;
@@ -117,7 +117,7 @@ contract Faisaa {
 
         // mint the amount
         uint96 amount = safe96(rawAmount, "Faisaa::mint: amount exceeds 96 bits");
-        require(amount <= SafeMath.div(SafeMath.mul(totalSupply, mintCap), 100), "Faisaa::mint: exceeded mint cap");
+        //require(amount <= SafeMath.div(SafeMath.mul(totalSupply, mintCap), 100), "Faisaa::mint: exceeded mint cap");
         totalSupply = safe96(SafeMath.add(totalSupply, amount), "Faisaa::mint: totalSupply exceeds 96 bits");
 
         // transfer the amount to the recipient

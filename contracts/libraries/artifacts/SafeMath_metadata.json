@@ -1,6 +1,6 @@
 {
 	"compiler": {
-		"version": "0.5.16+commit.9c3226ce"
+		"version": "0.6.6+commit.6c089d02"
 	},
 	"language": "Solidity",
 	"output": {
@@ -14,10 +14,13 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"contracts/libraries/SafeMath.sol": "SafeMath"
+			"contracts/libraries/FaisaaLibrary.sol": "SafeMath"
 		},
 		"evmVersion": "istanbul",
 		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
 		"optimizer": {
 			"enabled": true,
 			"runs": 9999
@@ -25,11 +28,18 @@
 		"remappings": []
 	},
 	"sources": {
-		"contracts/libraries/SafeMath.sol": {
-			"keccak256": "0x9c8465de751317860b623cd77f7f53f41a84b6624c0580ee526dcf7a2b7cb80c",
+		"contracts/interface/IFaisaaPair.sol": {
+			"keccak256": "0xb7d3defd1c9c6de3602e30836afc15e4a611c5faca727590c60d5679fb94364e",
 			"urls": [
-				"bzz-raw://9b371b3eb0649b486f76cd628cc060354d1ac11fa8baed1170567271655f05d7",
-				"dweb:/ipfs/QmTUg31wK9UyX6o1Q1mxE4DQhuc1rWGBanNTu1uagNVQB6"
+				"bzz-raw://791a1d122f7dbd43baaaa9377f7a5728de599d09931857620442a88170d2e5c9",
+				"dweb:/ipfs/QmTG6Hppp3iz4eUrhH6WrcwLdJBS9d2otJQcedeccUchmn"
+			]
+		},
+		"contracts/libraries/FaisaaLibrary.sol": {
+			"keccak256": "0xffb6427a935e190bf4819bc517c6cf5a2bd6be4ae2f313e778cf3514ee728ef9",
+			"urls": [
+				"bzz-raw://2cd724ec0842d6af7411ed043abb55a3fe87df4a4bb9a5720e0070c7c7bc9f90",
+				"dweb:/ipfs/QmbyUaNDzfBRZwsYDUTPngZcrMMmq6x4eugaGKomPc6zq1"
 			]
 		}
 	},

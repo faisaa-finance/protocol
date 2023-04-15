@@ -1,8 +1,22 @@
+// SPDX-License-Identifier: MIT
 pragma solidity >=0.5.16;
 
 import '../interface/IFaisaaPair.sol';
 
-import "./SafeMath.sol";
+library SafeMath {
+    function add(uint x, uint y) internal pure returns (uint z) {
+        require((z = x + y) >= x, 'ds-math-add-overflow');
+    }
+
+    function sub(uint x, uint y) internal pure returns (uint z) {
+        require((z = x - y) <= x, 'ds-math-sub-underflow');
+    }
+
+    function mul(uint x, uint y) internal pure returns (uint z) {
+        require(y == 0 || (z = x * y) / y == x, 'ds-math-mul-overflow');
+    }
+}
+
 
 library FaisaaLibrary {
     using SafeMath for uint;
@@ -21,7 +35,7 @@ library FaisaaLibrary {
                 hex'ff',
                 factory,
                 keccak256(abi.encodePacked(token0, token1)),
-                hex'e749160b7215c73975a120b97653690e779a2e4276b6233e2d0554e4a9ab9223' // init code hash
+                hex'f75f3b44da2f29658800301465fe20a01dc06fa8fe4f57f3dd03a8796b51c3ff' // init code hash
             ))));
     }
 
