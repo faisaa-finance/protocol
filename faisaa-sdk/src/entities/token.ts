@@ -2,7 +2,6 @@ import invariant from 'tiny-invariant'
 import { ChainId } from '../constants'
 import { validateAndParseAddress } from '../utils'
 import { Currency } from './currency'
-import { WETH } from '../faisaa_address.json'
 
 /**
  * Represents an ERC20 token with a unique address and some metadata.
@@ -57,19 +56,19 @@ export function currencyEquals(currencyA: Currency, currencyB: Currency): boolea
   }
 }
 
-export const WDEV = {
-  [ChainId.TESTNET]: new Token(
-    ChainId.TESTNET,
-    '0x20340852CFc1bE079D7FFf0845FCB569F5639439',
-    18,
-    WETH,
-    'Wrapped CORE'
-  ),
+export const WETH = {
   [ChainId.MAINNET]: new Token(
     ChainId.MAINNET,
-    '0x20340852CFc1bE079D7FFf0845FCB569F5639439',
+    '0xf6077b8dacec85be11d8d2da04e1705668985bcf',
     18,
-    WETH,
+    'WCORE',
     'Wrapped CORE'
   ),
+  [ChainId.TESTNET]: new Token(
+    ChainId.TESTNET,
+    '0xDb4C908A02733E249FD57DDd46661c274A808b96',
+    18,
+    'WCORE',
+    'Wrapped CORE'
+  )
 }
